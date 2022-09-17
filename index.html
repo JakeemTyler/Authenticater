@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper"></div>
+</body>
+
+<script>
+var eleWrapper = document.body.querySelector(".wrapper");
+
+function autho(userId, password){
+
+    userId=prompt("Please input username")
+    password=prompt("Please enter password")
+    if(userId=="admin" && password=="secret"){
+        console.log("Welcome admin!")
+        eleWrapper.innerHTML = "Welcome admin, you've now entered the matrix!"
+    }
+    else{
+    console.log("Bad Login Credentials")
+    eleWrapper.innerHTML = "Bad Login Credentials! You will be terminated from the Matrix."
+    }
+}
+autho()
+
+</script>
+</html>
